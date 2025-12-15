@@ -43,7 +43,7 @@ action:
     device_id: your_device_id
 ```
 ## Support
-- GitHub Issues: [link](https://github.com/your-repo/issues)
+- GitHub Issues: [link](https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS/issues)
 - Email: support@openaudiohome.com
 
 ## License
