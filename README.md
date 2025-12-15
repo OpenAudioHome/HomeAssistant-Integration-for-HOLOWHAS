@@ -41,4 +41,10 @@ action:
   service: holowhas.turn_on
   target:
     device_id: your_device_id
+```
+## Support
+- GitHub Issues: [link](https://github.com/your-repo/issues)
+- Email: support@openaudiohome.com
 
+## License
+MIT License
