@@ -48,3 +48,13 @@ action:
 
 ## License
 MIT License
+
+### version
+We change domain value from OpenAudio to openaudio in const.py (October 23, 2025)
+
+## Note
+For HOLOWHAS, you need use firmware 1.1.24
+For HOLOWHAS Ultra, you need use firmware 1.3.39
+For HOLOWHAS Plus, you need use firmware 1.14.37 (with PWM function)
+For HOLOWHAS Max, you need use firmware 1.15.40 (with PWM function).
+If you don't have latest firmware version, just contact support@openaudiohome.com.
