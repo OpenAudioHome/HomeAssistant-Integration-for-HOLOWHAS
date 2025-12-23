@@ -49,7 +49,7 @@ action:
 ## License
 MIT License
 
-### version
+### Version
 We change domain value from OpenAudio to openaudio in const.py (October 23, 2025)
 
 ## Note
