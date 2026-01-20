@@ -44,7 +44,7 @@ action:
 ```
 ## Support
 - GitHub Issues: [link](https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS/issues)
-- Email: support@openaudiohome.com
+- Email: support@openaudio.io
 
 ## License
 MIT License
@@ -61,4 +61,4 @@ For HOLOWHAS Plus, you need use firmware 1.14.37 (with PWM function)
 
 For HOLOWHAS Max, you need use firmware 1.15.40 (with PWM function).
 
-If you don't have latest firmware version, just contact support@openaudiohome.com.
+If you don't have latest firmware version, just contact support@openaudio.io.
