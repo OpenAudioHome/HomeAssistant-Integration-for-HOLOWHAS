@@ -1,0 +1,6 @@
+{
+  "name": "OpenAudio HOLOWHAS Integration",
+  "domains": ["media_player"],
+  "homeassistant": "2023.2.0",
+  "render_readme": true
+}
