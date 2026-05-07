@@ -132,7 +132,6 @@ class OpenAudioHub:
     async def _fetch_data_v3(self):
         """Get the data from OpenAudio"""
         devices = await self._get_devices_info()
-        #LOGGER.debug("OpenAudio devices info: %s", devices)
 
         for device in devices:
             if self.openaudios.get(device["device_id"]) is None:
@@ -142,7 +141,6 @@ class OpenAudioHub:
             self.openaudios[device["device_id"]].update(device)
 
         zones = await self._get_zones_info()
-        #LOGGER.debug("OpenAudio zone info: %s", zones)
 
         input_device_id = ""
 
@@ -162,7 +160,6 @@ class OpenAudioHub:
 
 
         inputs = await self._get_input_info()
-        #LOGGER.debug("OpenAudio input info: %s", inputs)
 
         for input_id in inputs["input_ids"]:
             if self.openaudios.get(input_device_id) is not None:
@@ -175,7 +172,6 @@ class OpenAudioHub:
                 self.group_inputs[input_id] = f"Source {input_id}"
             else:
                 LOGGER.debug("OpenAudio get input_id is NONE")
-        #LOGGER.debug("----> group input %s", self.group_inputs)
 
 class OpenAudioDevice:
     """HA device for OpenAudio"""

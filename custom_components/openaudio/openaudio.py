@@ -204,7 +204,6 @@ class OpenAudioClient:
             input_str = { "input_ids": []}
             if input is not None and len(input)>0:
                 input_str = { "input_ids": [input]}
-            #logger.debug("--------> input_str: %s", input_str)
 
             async with aiohttp.ClientSession() as session:
                 async with session.put(f"http://{ip_address}/api/{api_version}/zones/{zone_id}/input", json = input_str) as response:

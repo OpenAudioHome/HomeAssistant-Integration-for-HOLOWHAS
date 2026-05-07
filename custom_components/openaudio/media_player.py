@@ -192,7 +192,6 @@ class Zone(OpenAudioMediaPlayerBase):
     def source(self) -> str:
         """Currently selected input source"""
         zone_inputs = self._amp.zones[self._zone_id]["input"]
-        #LOGGER.debug("----> zone_inputs %s", zone_inputs)
         for input_id in zone_inputs:
             if self._amp.hub.group_inputs[str(input_id)] is not None:
                 return self._amp.hub.group_inputs[str(input_id)]
@@ -214,7 +213,6 @@ class Zone(OpenAudioMediaPlayerBase):
         """Select input source."""
 
         input_id = None
-        #LOGGER.debug("----> source: %s", source)
         for i in self._amp.hub.group_inputs:
             input = self._amp.hub.group_inputs[i]
             if input == source:
@@ -249,11 +247,6 @@ class InputMediaPlayer(OpenAudioMediaPlayerBase):
     def supported_features(self) -> MediaPlayerEntityFeature:
         """Flag media player features that are supported."""
         features = MediaPlayerEntityFeature.SELECT_SOURCE | MediaPlayerEntityFeature.TURN_ON | MediaPlayerEntityFeature.TURN_OFF
-        
-        # Only add volume control if volume exists for this input
-        #input_data = self._amp.inputs[self._input_id]
-        #if "volume" in input_data and input_data["volume"] is not None:
-        #    features |= MediaPlayerEntityFeature.VOLUME_SET
             
         return features
     
@@ -297,9 +290,7 @@ class InputMediaPlayer(OpenAudioMediaPlayerBase):
     @property
     def icon(self):
         """Return dynamic icon based on input type."""
-        #LOGGER.debug("OpenAudio source : %s", self.source)
         input_type = self.source
-        #LOGGER.debug("OpenAudio input type: %s", input_type)
         # Map input types to appropriate icons
         icon_map = {
             "Airplay": "mdi:cast-audio-variant",

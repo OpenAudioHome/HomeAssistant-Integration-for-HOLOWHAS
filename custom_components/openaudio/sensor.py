@@ -33,8 +33,6 @@ async def async_setup_entry(
 
     for amp_id in hub.openaudios:
         amp = hub.openaudios[amp_id]
-        #entities.append(SignalStrength(amp, coordinator, config_entry))
-        #entities.append(ConnectionType(amp, coordinator, config_entry))
         entities.append(SSID(amp, coordinator, config_entry))
         entities.append(Uptime(amp, coordinator, config_entry))
         entities.append(CpuUsage(amp, coordinator, config_entry))
