@@ -60,6 +60,7 @@ Result:
 config/
     └── custom_components/
                      └── openaudio/
+```
 
 Restart Home Assistant.
 
