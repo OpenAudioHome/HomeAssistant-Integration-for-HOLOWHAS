@@ -56,9 +56,10 @@ into:
 config/custom_components/
 
 Result:  
-config/  
-    └── custom_components/  
-                          └── openaudio/
+```text
+config/
+    └── custom_components/
+                     └── openaudio/
 
 Restart Home Assistant.
 
