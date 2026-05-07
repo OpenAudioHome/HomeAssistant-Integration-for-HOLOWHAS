@@ -28,19 +28,19 @@ This integration allows Home Assistant to control and monitor OpenAudio amplifie
 
 1. Open HACS
 
-2. Go to:
+2. Go to:  
 Integrations
 
-3. Click:
+3. Click:  
 ⋮ → Custom repositories
 
-4. Add repository:
+4. Add repository:  
 https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS
 
-5. Category:
+5. Category:  
 Integration
 
-6. Search for:
+6. Search for:  
 OpenAudio
 
 7. Install and restart Home Assistant.
@@ -49,17 +49,16 @@ OpenAudio
 
 # Manual Installation
 
-Copy:
+Copy:  
 custom_components/openaudio
 
-into:
+into:  
 config/custom_components/
 
-Result:config/
-
-           └── custom_components/
-
-                                 └── openaudio/
+Result:  
+config/  
+    └── custom_components/  
+                          └── openaudio/
 
 Restart Home Assistant.
 
@@ -69,16 +68,16 @@ Restart Home Assistant.
 
 1. Open Home Assistant
 
-2. Navigate to:
+2. Navigate to:  
 Settings → Devices & Services
 
-3. Click:
+3. Click:  
 Add Integration
 
-4. Search for:
+4. Search for:  
 OpenAudio
 
-5. Enter:
+5. Enter:  
 - OpenAudio device IP address
 - Polling interval
 
