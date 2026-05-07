@@ -55,12 +55,11 @@ custom_components/openaudio
 into:
 config/custom_components/
 
-Result:
-config/
+Result:config/
 
-└── custom_components/
+           └── custom_components/
 
-       └── openaudio/
+                                 └── openaudio/
 
 Restart Home Assistant.
 
@@ -97,15 +96,15 @@ OpenAudio
 
 ## Media Player
 
-<img src=\"screenshots/zone.png\" width=\"500\">
-<img src=\"screenshots/source.png\" width=\"500\">
-<img src=\"screenshots/zone_player.png\" width=\"500\">
-<img src=\"screenshots/source_player.png\" width=\"500\">
+![Zones](screenshots/zone.png)
+![Sources](screenshots/source.png)
+![Zone Player](screenshots/zone_player.png)
+![Source Player](screenshots/source_player.png)
 
 ## Device Configuration
 
-<img src=\"screenshots/configuration.png\" width=\"500\">
-<img src=\"screenshots/device_create.png\" width=\"500\">
+![Config](screenshots/configuration.png)
+![Device Create](screenshots/device_create.png)]
 
 ---
 
