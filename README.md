@@ -138,7 +138,7 @@ Add the following to `configuration.yaml`:
 logger:
 logs:
  custom_components.openaudio: debug
-
+```
 ---
 
 ## Support
