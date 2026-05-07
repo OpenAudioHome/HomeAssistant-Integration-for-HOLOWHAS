@@ -1,56 +1,149 @@
-# HOLOWHAS HomeAssistant Integration
+# OpenAudio Home Assistant Integration
 
-Seamlessly integrate your HOLOWHAS devices with HomeAssistant for unified control, automation, and monitoring.  
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
+[![GitHub Release](https://img.shields.io/github/release/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS.svg)](https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS/releases)
+[![License](https://img.shields.io/github/license/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS.svg)](LICENSE)
+
+OpenAudio integration for Home Assistant.
+
+This integration allows Home Assistant to control and monitor OpenAudio amplifiers and multi-room audio systems over the local network.
 
 ## Features
-- Full control of HOLOWHAS devices from HomeAssistant  
-- Real-time status updates  
-- Automation support (triggers, actions, conditions)  
-- Unified management across multiple devices  
 
-## Installation
+- Zone media player support
+- Volume control
+- Mute/unmute
+- Input/source selection
+- Real-time zone status updates
+- Multi-zone support
+- Local network communication
+- Config Flow support
+- HACS compatible
 
-### HACS (Recommended)
-1. Open HACS in HomeAssistant.  
-2. Go to **Integrations → Explore & Add Repositories**.  
-3. Search for `HOLOWHAS` and install.  
-4. Restart HomeAssistant.  
+---
 
-### Manual
-1. Download the repository.  
-2. Copy the `holowhas` folder into `<config_dir>/custom_components/`.  
-3. Restart HomeAssistant.  
+# Installation
 
-## Configuration
-1. Go to **Settings → Devices & Services → Add Integration**.  
-2. Search for **HOLOWHAS** and follow the setup wizard.  
-3. Enter your device credentials or API token if required.  
+## HACS Installation
 
-## Usage
-- Control your devices directly from the HomeAssistant dashboard.  
-- Create automations using device states and events.  
-- Monitor device status and logs in real-time.  
+1. Open HACS
 
-## Example Automation
+2. Go to:
+Integrations
+
+3. Click:
+⋮ → Custom repositories
+
+4. Add repository:
+https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS
+
+5. Category:
+Integration
+
+6. Search for:
+OpenAudio
+
+7. Install and restart Home Assistant.
+
+---
+
+# Manual Installation
+
+Copy:
+custom_components/openaudio
+
+into:
+config/custom_components/
+
+Result:
+config/
+└── custom_components/
+       └── openaudio/
+
+Restart Home Assistant.
+
+---
+
+# Configuration
+
+1. Open Home Assistant
+
+2. Navigate to:
+Settings → Devices & Services
+
+3. Click:
+Add Integration
+
+4. Search for:
+OpenAudio
+
+5. Enter:
+- OpenAudio device IP address
+- Polling interval
+
+---
+
+# Supported Platforms
+
+| Platform     | Supported |
+|--------------|-----------|
+| media_player | Yes       |
+| sensor       | Yes       |
+
+---
+# Screenshots
+
+## Media Player
+
+<img src=\"screenshots/zone.png\" width=\"500\">
+<img src=\"screenshots/source.png\" width=\"500\">
+<img src=\"screenshots/zone_player.png\" width=\"500\">
+<img src=\"screenshots/source_player.png\" width=\"500\">
+
+## Device Configuration
+
+<img src=\"screenshots/configuration.png\" width=\"500\">
+<img src=\"screenshots/device_create.png\" width=\"500\">
+
+---
+
+# Requirements
+
+- Home Assistant 2025.1.0 or newer
+- OpenAudio device connected to local network
+
+---
+
+# Troubleshooting
+
+## Device Not Found
+
+- Verify device IP address
+- Verify Home Assistant and OpenAudio are on the same network
+- Verify firewall settings
+
+## Integration Unavailable
+
+- Restart Home Assistant
+- Verify device firmware
+- Check Home Assistant logs
+
+---
+
+# Debug Logging
+
+Add the following to `configuration.yaml`:
+
 ```yaml
-alias: Turn on HOLOWHAS at sunset
-trigger:
-  platform: sun
-  event: sunset
-action:
-  service: holowhas.turn_on
-  target:
-    device_id: your_device_id
-```
+logger:
+logs:
+ custom_components.openaudio: debug
+
+---
+
 ## Support
 - GitHub Issues: [link](https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS/issues)
 - Email: support@openaudio.io
-
-## License
-MIT License
-
-### Version
-We change domain value from OpenAudio to openaudio in const.py (October 23, 2025)
 
 ## Note
 For HOLOWHAS, you need use firmware 1.1.24
