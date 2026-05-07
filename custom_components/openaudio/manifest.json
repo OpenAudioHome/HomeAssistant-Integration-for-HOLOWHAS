@@ -1,16 +1,18 @@
 {
   "domain": "openaudio",
   "name": "OpenAudio",
+  "version": "0.1.4",
+  "documentation": "https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS",
+  "issue_tracker": "https://github.com/OpenAudioHome/HomeAssistant-Integration-for-HOLOWHAS/issues",
   "codeowners": [
-    "@OpenAudio"
+    "@OpenAudioHome"
   ],
   "config_flow": true,
-  "dependencies": [],
-  "homekit": {},
   "integration_type": "hub",
   "iot_class": "local_polling",
-  "loggers": ["openaudio"],
-  "ssdp": [],
-  "version": "0.1.3",
-  "zeroconf": []
+  "requirements": [],
+  "dependencies": [],
+  "loggers": [
+    "custom_components.openaudio"
+  ]
 }
