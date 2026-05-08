@@ -1,4 +1,5 @@
 {
+  "domain": "openaudio",
   "name": "OpenAudio",
   "codeowners": [
     "@OpenAudioHome"
