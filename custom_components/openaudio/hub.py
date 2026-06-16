@@ -17,6 +17,7 @@ class OpenAudioHub:
     ) -> None:
         self._hass = hass
         self._ip_address = ip_address
+        self._hub_id = ip_address
         self.openaudios = {}
         self.group_inputs = {}
         self.client = None
