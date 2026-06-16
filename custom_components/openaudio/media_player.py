@@ -39,7 +39,7 @@ async def async_setup_entry(
         for input_id in amp.inputs:
             input = amp.inputs[input_id]
             entities.append(
-                InputMediaPlayer(amp, coordinator, config_entry, input_id)
+                InputMediaPlayer(amp, coordinator, config_entry, input_id, hub._ip_address)
             )
     if entities:
         async_add_entities(entities)
@@ -230,14 +230,15 @@ class InputMediaPlayer(OpenAudioMediaPlayerBase):
     
     device_class = MediaPlayerDeviceClass.RECEIVER
     
-    def __init__(self, amp: OpenAudioDevice, coordinator, config_entry, input_id) -> None:
+    def __init__(self, amp: OpenAudioDevice, coordinator, config_entry, input_id, ip_address) -> None:
         """Initialize the input media player."""
         super().__init__(amp, coordinator, config_entry)
         self._input_id = input_id
+        self._ip_address = ip_address
     
     @property
     def unique_id(self) -> str:
-        return f"input_{self._input_id}"
+        return f"{self._ip_address}_input_{self._input_id}"
     
     @property
     def name(self) -> str:
